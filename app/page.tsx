@@ -1,8 +1,13 @@
+import { NavBar } from "@/components/NavBar";
+import { SideBar } from "@/components/SideBar";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen bg-zinc-50">
-      <p>AAAAAAAAAA</p>
+    <div className="w-full h-auto flex">
+      <SideBar />
+      <div className="ml-[18%] flex-1">
+        <NavBar />
+      </div>
     </div>
   );
 }
