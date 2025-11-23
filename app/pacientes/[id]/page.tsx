@@ -22,7 +22,7 @@ export default function PacientePagina() {
 
   useEffect(() => {
     auxObterPaciente();
-  });
+  }, [id]);
   return (
     <div className="w-full h-auto flex">
       <SideBar />
@@ -36,7 +36,7 @@ export default function PacientePagina() {
                 <p className="text-[#1E1E1E] text-4xl font-bold">{paciente.nome}</p>
                 <div>
                   <p className="text-[#07122D] text-xl font-medium">Data de Nascimento:</p>
-                  <p className="text-[#1E1E1E] text-3xl font-bold">{paciente.dataNascimento.replaceAll("-", "/")}</p>
+                  <p className="text-[#1E1E1E] text-3xl font-bold">{paciente.dataNascimento?.replaceAll("-", "/")}</p>
                 </div>
                 <div>
                   <p className="text-[#07122D] text-xl font-medium">CPF:</p>
