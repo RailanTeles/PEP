@@ -3,7 +3,7 @@ import api from './api';
 
 export async function obterPacientes() {
     try {
-        const resposta = await api.get("/api/pacientes")
+        const resposta = await api.get("/api/paciente")
         return resposta.data
     } catch (erro) {
         throw erro;
@@ -12,7 +12,7 @@ export async function obterPacientes() {
 
 export async function obterPacienteId(id: number) {
     try {
-        const resposta = await api.get(`/api/pacientes/${id}`)
+        const resposta = await api.get(`/api/paciente/${id}`)
         return resposta.data
     } catch (erro) {
         throw erro;
@@ -21,7 +21,7 @@ export async function obterPacienteId(id: number) {
 
 export async function adicionaPaciente(paciente: PatienteType) {
     try {
-        const resposta = await api.post(`/api/pacientes`, paciente)
+        const resposta = await api.post(`/api/paciente`, paciente)
         return resposta.data
     } catch (erro) {
         throw erro;
